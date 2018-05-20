@@ -1,5 +1,6 @@
-body {
+html body {
     font-family: 'Montserrat', sans-serif;
+    margin: 8px;
 }
 
 h2 {
@@ -13,7 +14,12 @@ input {
     margin-left: 1rem;
 }
 
-button {
+.controls label {
+    margin-bottom: 0;
+}
+
+.controls button,
+.modal-footer button {
     border: 1px solid black;
     background-color: #fff;
     border-radius: 0;
@@ -22,6 +28,10 @@ button {
     margin: 1rem 0;
     transition: all .2s linear;
     cursor: pointer;
+}
+
+.modal-footer button {
+    margin: 0;
 }
 
 .no-entries {
@@ -60,7 +70,17 @@ button:hover {
     left: 0;
 }
 
-@media (max-width: 500px) {
+table tr {
+    cursor: pointer;
+    background-color: #fff;
+    transition: all .2s ease;
+}
+
+table tr:hover {
+    background-color: whitesmoke;
+}
+
+@media (max-width: 600px) {
     input {
         margin-left: 0;
     }
