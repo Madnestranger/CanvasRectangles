@@ -2,26 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta content="Viacheslav Muzyka" name="author">
     <meta http-equiv="X-UA-Compatible" content="IE=9">
     <title>Derivco</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
     <script src="lodash.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
 </head>
 <body>
 <div class="background-image"></div>
-<h2>Test Task For Derivco</h2>
-<div class="controls">
-    <label for="rectangles-amount">Please set up amount of rectangles:</label>
-    <input type="number" id="rectangles-amount" onchange="checkIfValidAmountOfRectangles(this)">
-    <div>
-        <button onclick="buildRandomRectangles()">START</button>
-        <!--<button onclick="buildOutputRectangles()">BUILD OUTPUT</button>-->
+<div class="header">
+    <h2>Test Task For Derivco</h2>
+    <div class="controls">
+        <label for="rectangles-amount">Please set up amount of rectangles:</label>
+        <input type="number" id="rectangles-amount" onchange="checkIfValidAmountOfRectangles(this)">
+        <div>
+            <button onclick="buildRandomRectangles()">START</button>
+            <button onclick="showHistory()">HISTORY</button>
+        </div>
     </div>
 </div>
 <canvas id="canvasInput"></canvas>
 <canvas id="canvasOutput"></canvas>
 <script src="app.js"></script>
+<div class="modal fade" id="historyModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>History</h3>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div id="history-rows">
+
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal">CLOSE</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

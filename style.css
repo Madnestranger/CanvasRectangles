@@ -20,6 +20,25 @@ button {
     padding: 5px 15px;
     display: inline-block;
     margin: 1rem 0;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+
+.no-entries {
+    background-color: whitesmoke;
+    text-align: center;
+    font-weight: bold;
+    padding: 1.8rem;
+}
+
+#history-rows {
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+button:hover {
+    background-color: #000000;
+    color: #fff;
 }
 
 #canvasInput,
@@ -39,4 +58,14 @@ button {
     position: fixed;
     top: 0;
     left: 0;
+}
+
+@media (max-width: 500px) {
+    input {
+        margin-left: 0;
+    }
+    #canvasInput,
+    #canvasOutput {
+        height: calc((100vh - 185px - 0.9em) / 2);
+    }
 }
